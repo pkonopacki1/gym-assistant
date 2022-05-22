@@ -4,6 +4,13 @@
         <title>Gym assistant - starting page</title>
     </head>
     <body>
-        <h1>Gym assistant</h1>
+        <h1>Welcome to Gym Assistant</h1>
+        <img th:src="@{/images/barbell.png}"/>
+
+        <ol>
+            <li>
+                <a th:href="@{/createWorkout}">Add new workout</a>
+            </li>
+        </ol>
     </body>
 </html>

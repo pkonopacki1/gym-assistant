@@ -1,14 +1,15 @@
 package com.konopackipio1.gymassistant.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Controller
-public class MainController {
+public class MainController implements WebMvcConfigurer  {
 
-    @RequestMapping("/")
-    public String welcomeController() {
-        return "welcome";
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+       registry.addViewController("/").setViewName("welcome");
     }
-    
+
 }

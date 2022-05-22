@@ -1,21 +1,12 @@
 package com.konopackipio1.gymassistant.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
 public class Exercise {
 
     private String name;
-    private MuscleGroup muscleGroup;
-
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public MuscleGroup getMuscleGroup() {
-        return muscleGroup;
-    }
-    public void setMuscleGroup(MuscleGroup muscleGroup) {
-        this.muscleGroup = muscleGroup;
-    }    
-    
+    private MuscleGroup muscleGroup;    
 }

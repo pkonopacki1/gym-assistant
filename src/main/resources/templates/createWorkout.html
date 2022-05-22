@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create new workout</title>
+</head>
+
+<body>
+    <h1>Add your new workout...</h1>
+    <form method="POST" th:object="${workout}">
+        <div class="grid">
+            <p>Workout name:
+                <input type="text" th:field="*{name}">
+            </p>
+        </div>
+    </form>
+</body>
+
+</html>
