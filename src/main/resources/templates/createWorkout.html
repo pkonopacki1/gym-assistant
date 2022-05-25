@@ -7,12 +7,27 @@
 
 <body>
     <h1>Add your new workout...</h1>
-    <form method="POST" th:object="${workout}">
-        <div class="grid">
-            <p>Workout name:
-                <input type="text" th:field="*{name}">
-            </p>
-        </div>
+    <form method="GET" th:object="${form}">
+        <p>Workout name:
+            <input type="text" th:field="*{name}">
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Exercise</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="workoutExercise, itemStat : *{workoutExerciseList}">
+                    <td>
+                        <select th:field="*{workoutExerciseList[__${itemStat.index}__].exercise}">
+                            <option th:each="exercise : ${exercises}" th:value="${exercise}" th:text="${exercise.name}">
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="submit" value="submitButton">
     </form>
 </body>
 

@@ -8,5 +8,5 @@ import lombok.Data;
 public class Exercise {
 
     private String name;
-    private MuscleGroup muscleGroup;    
+    private MuscleGroup muscleGroup;
 }
